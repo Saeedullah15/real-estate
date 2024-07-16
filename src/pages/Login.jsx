@@ -17,6 +17,9 @@ const Login = () => {
         const email = form.get("email");
         const pass = form.get("password");
 
+        // form resetting
+        e.target.reset();
+
         // signing in a user
         signInUser(email, pass)
             .then(result => {
@@ -27,7 +30,7 @@ const Login = () => {
                 console.log(user);
             })
             .catch(error => {
-                toast.error(error, {
+                toast.error(error.code, {
                     position: 'top-center',
                 });
                 console.error(error);
@@ -44,7 +47,7 @@ const Login = () => {
                 console.log(user);
             })
             .catch(error => {
-                toast.error(error, {
+                toast.error(error.code, {
                     position: 'top-center',
                 });
                 console.error(error);
@@ -61,7 +64,7 @@ const Login = () => {
                 console.log(user);
             })
             .catch(error => {
-                toast.error(error, {
+                toast.error(error.code, {
                     position: 'top-center',
                 });
                 console.error(error);
@@ -102,8 +105,8 @@ const Login = () => {
                                 <Link to="/register" className='text-blue-600 ml-2'>Register!</Link>
                             </p>
                             <div className='flex justify-center items-center gap-4 mt-4 text-3xl'>
-                                <FaGoogle onClick={handleGoogleLogin} className='cursor-pointer' />
-                                <FaGithub onClick={handleGithubLogin} className='cursor-pointer' />
+                                <FaGoogle onClick={handleGoogleLogin} className='cursor-pointer' title='Login using Google' />
+                                <FaGithub onClick={handleGithubLogin} className='cursor-pointer' title='Login using Github' />
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>

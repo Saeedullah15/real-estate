@@ -24,6 +24,9 @@ const Register = () => {
         // alert("uppercase, lowercase, 6");
         // }
 
+        // form resetting
+        e.target.reset();
+
         // creating a user
         createUser(email, pass)
             .then(result => {
@@ -34,7 +37,7 @@ const Register = () => {
                 console.log(user);
             })
             .catch(error => {
-                toast.error(error, {
+                toast.error(error.code, {
                     position: 'top-center',
                 });
                 console.error(error);
