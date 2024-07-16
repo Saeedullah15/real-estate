@@ -1,11 +1,15 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
+import Footer from './components/Footer'
+import NavBar from './components/NavBar'
 
 function App() {
 
     return (
         <>
-            <h1>this is app compo</h1>
-            <h1>real state is loading...</h1>
+            <NavBar></NavBar>
+            <Outlet></Outlet>
+            <Footer></Footer>
         </>
     )
 }
