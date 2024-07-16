@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../providers/AuthProvider';
 
 const Login = () => {
-    const { signInUser, signInWithGoogle } = useContext(AuthContext);
+    const { signInUser, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -36,6 +36,23 @@ const Login = () => {
 
     const handleGoogleLogin = () => {
         signInWithGoogle()
+            .then(result => {
+                const user = result.user;
+                toast.success("Logged in Successfully!", {
+                    position: 'top-center',
+                });
+                console.log(user);
+            })
+            .catch(error => {
+                toast.error(error, {
+                    position: 'top-center',
+                });
+                console.error(error);
+            })
+    }
+
+    const handleGithubLogin = () => {
+        signInWithGithub()
             .then(result => {
                 const user = result.user;
                 toast.success("Logged in Successfully!", {
@@ -86,7 +103,7 @@ const Login = () => {
                             </p>
                             <div className='flex justify-center items-center gap-4 mt-4 text-3xl'>
                                 <FaGoogle onClick={handleGoogleLogin} className='cursor-pointer' />
-                                <FaGithub />
+                                <FaGithub onClick={handleGithubLogin} className='cursor-pointer' />
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
