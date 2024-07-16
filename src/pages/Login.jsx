@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../providers/AuthProvider';
 
 const Login = () => {
-    const { signInUser } = useContext(AuthContext);
+    const { signInUser, signInWithGoogle } = useContext(AuthContext);
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -19,9 +21,32 @@ const Login = () => {
         signInUser(email, pass)
             .then(result => {
                 const user = result.user;
+                toast.success("Logged in Successfully!", {
+                    position: 'top-center',
+                });
                 console.log(user);
             })
             .catch(error => {
+                toast.error(error, {
+                    position: 'top-center',
+                });
+                console.error(error);
+            })
+    }
+
+    const handleGoogleLogin = () => {
+        signInWithGoogle()
+            .then(result => {
+                const user = result.user;
+                toast.success("Logged in Successfully!", {
+                    position: 'top-center',
+                });
+                console.log(user);
+            })
+            .catch(error => {
+                toast.error(error, {
+                    position: 'top-center',
+                });
                 console.error(error);
             })
     }
@@ -60,7 +85,7 @@ const Login = () => {
                                 <Link to="/register" className='text-blue-600 ml-2'>Register!</Link>
                             </p>
                             <div className='flex justify-center items-center gap-4 mt-4 text-3xl'>
-                                <FaGoogle />
+                                <FaGoogle onClick={handleGoogleLogin} className='cursor-pointer' />
                                 <FaGithub />
                             </div>
                             <div className="form-control mt-6">
@@ -70,6 +95,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

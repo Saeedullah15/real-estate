@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { FaRegUserCircle } from "react-icons/fa";
 import { Link, NavLink } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from '../providers/AuthProvider';
 
 const NavBar = () => {
+    const { user, signOutUser } = useContext(AuthContext);
+    console.log(user);
+
+    const handleSignOut = () => {
+        signOutUser()
+            .then(() => {
+                toast.success("Logged Out Successfully!", {
+                    position: 'top-center',
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
+
     return (
         <div className="navbar bg-base-100">
             {/* nav start */}
@@ -47,9 +66,26 @@ const NavBar = () => {
 
             {/* nav end */}
             <div className="navbar-end md:space-x-2">
-                <Link to="/login" className="btn">Login</Link>
-                <Link to="/register" className="btn">Register</Link>
+                {
+                    user ?
+                        <div className='flex justify-center items-center gap-4'>
+                            <div title={user.displayName}>
+                                {
+                                    user.photoURL ? user.photoURL : <FaRegUserCircle className='text-4xl' />
+                                }
+                            </div>
+                            <Link onClick={handleSignOut} className="btn">Log Out</Link>
+                        </div>
+                        :
+                        <div className='space-x-2'>
+                            <Link to="/login" className="btn">Login</Link>
+                            <Link to="/register" className="btn">Register</Link>
+                        </div>
+                }
             </div>
+
+            {/* toast container */}
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

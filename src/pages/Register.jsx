@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../providers/AuthProvider';
 
 const Register = () => {
@@ -17,18 +19,24 @@ const Register = () => {
         const pass = form.get("password");
 
         // password validation
-        if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(pass)) {
-            // have to return
-            alert("uppercase, lowercase, 6");
-        }
+        // if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(pass)) {
+        // have to return
+        // alert("uppercase, lowercase, 6");
+        // }
 
         // creating a user
         createUser(email, pass)
             .then(result => {
                 const user = result.user;
+                toast.success("You have successfully created your account!", {
+                    position: 'top-center',
+                });
                 console.log(user);
             })
             .catch(error => {
+                toast.error(error, {
+                    position: 'top-center',
+                });
                 console.error(error);
             })
     }
@@ -82,6 +90,7 @@ const Register = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
