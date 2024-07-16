@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 
 const EstateDetails = () => {
@@ -6,6 +7,7 @@ const EstateDetails = () => {
 
     return (
         <div>
+            <Helmet><title>Estate Details | {id}</title></Helmet>
             <div className="card lg:card-side bg-base-100 shadow-xl">
                 <figure>
                     <img
