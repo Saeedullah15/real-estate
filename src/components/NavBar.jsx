@@ -28,6 +28,7 @@ const NavBar = () => {
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/UpdateProfile">Update Profile</NavLink></li>
                         <li><NavLink to="/UserProfile">User Profile</NavLink></li>
+                        <li><NavLink to="/dashboard">Dashboard</NavLink></li>
                     </ul>
                 </div>
                 <a className="lg:text-3xl md:text-2xl font-bold">Civic Spaces</a>
@@ -40,6 +41,7 @@ const NavBar = () => {
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/UpdateProfile">Update Profile</NavLink></li>
                     <li><NavLink to="/UserProfile">User Profile</NavLink></li>
+                    <li><NavLink to="/dashboard">Dashboard</NavLink></li>
                 </ul>
             </div>
 

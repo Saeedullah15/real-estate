@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const EachEstateCard = ({ eachEstate }) => {
     const { id, image, estate_title, segment_name, description, price, status, area, location, facilities } = eachEstate;
@@ -23,7 +24,9 @@ const EachEstateCard = ({ eachEstate }) => {
                         facilities.map((facility, idx) => <li key={idx}>{facility}</li>)
                     }
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">View Property</button>
+                        <button className="btn btn-primary">
+                            <Link to={`/estateDetails/${id}`}>View Property</Link>
+                        </button>
                     </div>
                 </div>
             </div>
