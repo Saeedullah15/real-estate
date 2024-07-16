@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../providers/AuthProvider';
 
@@ -101,7 +101,7 @@ const Login = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                            <p>Didn't have any account?
+                            <p>Don't have any account?
                                 <Link to="/register" className='text-blue-600 ml-2'>Register!</Link>
                             </p>
                             <div className='flex justify-center items-center gap-4 mt-4 text-3xl'>
@@ -115,7 +115,6 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-            <ToastContainer></ToastContainer>
         </div>
     );
 };

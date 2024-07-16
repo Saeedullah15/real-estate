@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { FaRegUserCircle } from "react-icons/fa";
 import { Link, NavLink } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../providers/AuthProvider';
 
 const NavBar = () => {
     const { user, signOutUser } = useContext(AuthContext);
-    console.log(user);
+    // console.log(user);
 
     const handleSignOut = () => {
         signOutUser()
@@ -69,23 +69,23 @@ const NavBar = () => {
                 {
                     user ?
                         <div className='flex justify-center items-center gap-4'>
-                            <div title={user.displayName}>
+                            <div title={user.displayName ? user.displayName : "Username is not available"}>
                                 {
-                                    user.photoURL ? user.photoURL : <FaRegUserCircle className='text-4xl' />
+                                    user.photoURL ?
+                                        <img className='w-10 h-10 rounded-full' src={user.photoURL} alt="" />
+                                        :
+                                        <FaRegUserCircle className='text-4xl' />
                                 }
                             </div>
                             <Link onClick={handleSignOut} className="btn">Log Out</Link>
                         </div>
                         :
-                        <div className='space-x-2'>
+                        <div className='flex space-x-2'>
                             <Link to="/login" className="btn">Login</Link>
                             <Link to="/register" className="btn">Register</Link>
                         </div>
                 }
             </div>
-
-            {/* toast container */}
-            <ToastContainer></ToastContainer>
         </div>
     );
 };
