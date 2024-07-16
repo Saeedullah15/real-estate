@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "image": "https://example.com/images/military_base.jpg",
+      "estate_title": "Fort Hamilton Military Base",
+      "segment_name": "Military Base",
+      "description": "A key military installation providing defense and support.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "300,000 sq ft",
+      "location": "Brooklyn, NY",
+      "facilities": ["Barracks", "Training Grounds", "Mess Hall", "Armory"]
+    },
+    {
+      "id": 2,
+      "image": "https://example.com/images/courthouse.jpg",
+      "estate_title": "Jefferson County Courthouse",
+      "segment_name": "Courthouse",
+      "description": "A historic courthouse located in the heart of the city.",
+      "price": "$2,500,000",
+      "status": "sale",
+      "area": "45,000 sq ft",
+      "location": "Birmingham, AL",
+      "facilities": ["Courtrooms", "Judges' Chambers", "Law Library"]
+    },
+    {
+      "id": 3,
+      "image": "https://example.com/images/library.jpg",
+      "estate_title": "Central City Library",
+      "segment_name": "Library",
+      "description": "A modern library offering extensive resources and community programs.",
+      "price": "$1,200,000",
+      "status": "rent",
+      "area": "25,000 sq ft",
+      "location": "Los Angeles, CA",
+      "facilities": ["Reading Rooms", "Computer Labs", "Conference Rooms"]
+    },
+    {
+      "id": 4,
+      "image": "https://example.com/images/public_park.jpg",
+      "estate_title": "Greenfield Public Park",
+      "segment_name": "Public Park",
+      "description": "A large public park featuring recreational facilities and open spaces.",
+      "price": "$3,000,000",
+      "status": "sale",
+      "area": "500,000 sq ft",
+      "location": "Austin, TX",
+      "facilities": ["Playgrounds", "Picnic Areas", "Walking Trails", "Sports Fields"]
+    },
+    {
+      "id": 5,
+      "image": "https://example.com/images/community_center.jpg",
+      "estate_title": "Downtown Community Center",
+      "segment_name": "Community Center",
+      "description": "A vibrant community center offering various activities and services.",
+      "price": "$750,000",
+      "status": "rent",
+      "area": "15,000 sq ft",
+      "location": "Chicago, IL",
+      "facilities": ["Event Halls", "Fitness Center", "Meeting Rooms"]
+    },
+    {
+      "id": 6,
+      "image": "https://example.com/images/library.jpg",
+      "estate_title": "Old Town Library",
+      "segment_name": "Library",
+      "description": "A historic library offering a wide range of books and community events.",
+      "price": "$900,000",
+      "status": "sale",
+      "area": "30,000 sq ft",
+      "location": "Boston, MA",
+      "facilities": ["Reading Areas", "Study Rooms", "Archives"]
+    }
+]
