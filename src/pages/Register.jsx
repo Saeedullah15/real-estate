@@ -19,10 +19,12 @@ const Register = () => {
         const pass = form.get("password");
 
         // password validation
-        // if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(pass)) {
-        // have to return
-        // alert("uppercase, lowercase, 6");
-        // }
+        if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(pass)) {
+            // have to return
+            return toast.warn("Password must have an Uppercase letter, a Lowercase letter and minimum 6 characters long!", {
+                position: 'top-center',
+            });
+        }
 
         // form resetting
         e.target.reset();
