@@ -52,7 +52,10 @@ const NavBar = () => {
                         <li><NavLink to="/dashboard">Dashboard</NavLink></li>
                     </ul>
                 </div>
-                <a className="lg:text-3xl md:text-2xl font-bold animate__animated animate__backInLeft">Civic Spaces</a>
+                <div className='flex flex-col'>
+                    <a className="lg:text-3xl md:text-2xl font-bold italic animate__animated animate__backInLeft">Civic Spaces</a>
+                    <small className='font-semibold text-amber-500 animate__animated animate__backInLeft'>- Transforming Together</small>
+                </div>
             </div>
 
             {/* nav center */}

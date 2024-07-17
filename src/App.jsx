@@ -8,8 +8,10 @@ function App() {
 
     return (
         <>
-            <NavBar></NavBar>
-            <Outlet></Outlet>
+            <div className='md:max-w-7xl mx-auto'>
+                <NavBar></NavBar>
+                <Outlet></Outlet>
+            </div>
             <Footer></Footer>
 
             {/* one toast container for the whole app in the parent component */}

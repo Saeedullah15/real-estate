@@ -19,3 +19,4 @@ Visit our live site at: [Civic Spaces](https://civic-spaces-21f74.web.app/)
 - **aos:** `npm install aos --save`
 - **animate.css:** `npm install animate.css --save`
 - **react-toastify:** `npm install --save react-toastify`
+- **swiper:** `npm install swiper`
