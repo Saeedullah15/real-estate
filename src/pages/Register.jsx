@@ -1,12 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../providers/AuthProvider';
 
 const Register = () => {
+    const [showPass, setShowPass] = useState(false);
     const { createUser } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -36,6 +39,7 @@ const Register = () => {
                 toast.success("You have successfully created your account!", {
                     position: 'top-center',
                 });
+                navigate("/");
                 console.log(user);
             })
             .catch(error => {
@@ -83,7 +87,12 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name='password' placeholder="Password" className="input input-bordered" />
+                                <label className="input input-bordered flex items-center gap-2">
+                                    <input type={showPass ? "text" : "password"} name='password' placeholder='Password' className="grow" />
+                                    <span onClick={() => setShowPass(!showPass)} className='cursor-pointer'>
+                                        {showPass ? <FaRegEyeSlash /> : <FaRegEye />}
+                                    </span>
+                                </label>
                             </div>
                             <p>Already have an account?
                                 <Link to="/login" className='text-blue-600 ml-2'>Login!</Link>

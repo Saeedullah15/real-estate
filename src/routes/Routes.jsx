@@ -8,6 +8,7 @@ import EstateDetails from "../pages/EstateDetails";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import UpdateProfile from "../pages/UpdateProfile";
 import PrivateRoute from "./PrivateRoute";
 
 const routes = createBrowserRouter([
@@ -37,6 +38,10 @@ const routes = createBrowserRouter([
                 path: "/dashboard",
                 element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
             },
+            {
+                path: "/updateProfile",
+                element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+            }
         ]
     },
 ]);

@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../providers/AuthProvider';
 
 const Login = () => {
     const { signInUser, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -27,6 +28,7 @@ const Login = () => {
                 toast.success("Logged in Successfully!", {
                     position: 'top-center',
                 });
+                navigate("/");
                 console.log(user);
             })
             .catch(error => {
@@ -44,6 +46,7 @@ const Login = () => {
                 toast.success("Logged in Successfully!", {
                     position: 'top-center',
                 });
+                navigate("/");
                 console.log(user);
             })
             .catch(error => {
@@ -61,6 +64,7 @@ const Login = () => {
                 toast.success("Logged in Successfully!", {
                     position: 'top-center',
                 });
+                navigate("/");
                 console.log(user);
             })
             .catch(error => {
@@ -105,8 +109,12 @@ const Login = () => {
                                 <Link to="/register" className='text-blue-600 ml-2'>Register!</Link>
                             </p>
                             <div className='flex justify-center items-center gap-4 mt-4 text-3xl'>
-                                <FaGoogle onClick={handleGoogleLogin} className='cursor-pointer' title='Login using Google' />
-                                <FaGithub onClick={handleGithubLogin} className='cursor-pointer' title='Login using Github' />
+                                <div className="tooltip tooltip-left tooltip-info" data-tip="Login using Google">
+                                    <FaGoogle onClick={handleGoogleLogin} className='cursor-pointer' />
+                                </div>
+                                <div className="tooltip tooltip-right tooltip-info" data-tip="Login using Github">
+                                    <FaGithub onClick={handleGithubLogin} className='cursor-pointer' />
+                                </div>
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
