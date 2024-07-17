@@ -1,18 +1,20 @@
 import 'animate.css';
 import React, { useContext } from 'react';
 import { FaRegUserCircle } from "react-icons/fa";
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../providers/AuthProvider';
 
 const NavBar = () => {
     const { user, signOutUser } = useContext(AuthContext);
+    const navigate = useNavigate();
     // console.log(user);
 
     const handleSignOut = () => {
         signOutUser()
             .then(() => {
+                navigate("/");
                 toast.success("Logged Out Successfully!", {
                     position: 'top-center',
                 });
