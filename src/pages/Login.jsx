@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../providers/AuthProvider';
 
 const Login = () => {
     const { signInUser, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
+    const location = useLocation();
     const navigate = useNavigate();
 
     const handleLogin = (e) => {
@@ -28,7 +29,7 @@ const Login = () => {
                 toast.success("Logged in Successfully!", {
                     position: 'top-center',
                 });
-                navigate("/");
+                navigate(location.state ? location.state : "/");
                 console.log(user);
             })
             .catch(error => {
@@ -46,7 +47,7 @@ const Login = () => {
                 toast.success("Logged in Successfully!", {
                     position: 'top-center',
                 });
-                navigate("/");
+                navigate(location.state ? location.state : "/");
                 console.log(user);
             })
             .catch(error => {
@@ -64,7 +65,7 @@ const Login = () => {
                 toast.success("Logged in Successfully!", {
                     position: 'top-center',
                 });
-                navigate("/");
+                navigate(location.state ? location.state : "/");
                 console.log(user);
             })
             .catch(error => {
@@ -78,14 +79,10 @@ const Login = () => {
     return (
         <div>
             <Helmet><title>Login | Civic Spaces</title></Helmet>
-            <div className="hero bg-base-200 min-h-screen">
-                <div className="hero-content flex-col">
-                    <div className="text-center">
+            <div className="bg-base-200 min-h-screen">
+                <div className="hero-content flex-col pt-20">
+                    <div className="text-center mb-4">
                         <h1 className="text-5xl font-bold">Please Login!</h1>
-                        <p className="py-6">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
-                        </p>
                     </div>
                     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         {/* login form */}

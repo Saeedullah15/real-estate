@@ -33,6 +33,7 @@ const routes = createBrowserRouter([
             {
                 path: "/estateDetails/:id",
                 element: <PrivateRoute><EstateDetails></EstateDetails></PrivateRoute>,
+                loader: () => fetch("/estateDetails.json"),
             },
             {
                 path: "/dashboard",

@@ -1,17 +1,25 @@
 import React from 'react';
-import banner2 from '../assets/20945153.jpg';
-import banner4 from '../assets/30401.jpg';
-import banner1 from '../assets/family-celebrates-winter-indoors-decorating-homemade-gingerbread-house-generated-by-artificial-intelligence.jpg';
-import banner3 from '../assets/realtor-counting-working.jpg';
+import banner1 from '../assets/1.jpg';
+import banner2 from '../assets/2.jpg';
+import banner3 from '../assets/3.jpg';
+import banner4 from '../assets/4.jpg';
+import banner5 from '../assets/5.jpg';
+import banner6 from '../assets/6.jpg';
+import banner7 from '../assets/7.jpg';
+import banner8 from '../assets/8.jpg';
 
 const Banner = () => {
     return (
-        <div>
+        <div className='mt-2'>
             <swiper-container scrollbar-clickable="true" autoplay="true" navigation="true">
-                <swiper-slide><img src={banner1} alt="" /></swiper-slide>
-                <swiper-slide><img src={banner2} alt="" /></swiper-slide>
-                <swiper-slide><img src={banner3} alt="" /></swiper-slide>
-                <swiper-slide><img src={banner4} alt="" /></swiper-slide>
+                <swiper-slide><img className='h-full w-full' src={banner1} alt="" /></swiper-slide>
+                <swiper-slide><img className='h-full w-full' src={banner2} alt="" /></swiper-slide>
+                <swiper-slide><img className='h-full w-full' src={banner3} alt="" /></swiper-slide>
+                <swiper-slide><img className='h-full w-full' src={banner4} alt="" /></swiper-slide>
+                <swiper-slide><img className='h-full w-full' src={banner5} alt="" /></swiper-slide>
+                <swiper-slide><img className='h-full w-full' src={banner6} alt="" /></swiper-slide>
+                <swiper-slide><img className='h-full w-full' src={banner7} alt="" /></swiper-slide>
+                <swiper-slide><img className='h-full w-full' src={banner8} alt="" /></swiper-slide>
             </swiper-container>
         </div>
     );

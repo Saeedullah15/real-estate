@@ -38,9 +38,9 @@ const UpdateProfile = () => {
     return (
         <div>
             <Helmet><title>Profile Update | Civic Spaces</title></Helmet>
-            <div className="hero bg-base-200 min-h-screen">
+            <div className="bg-base-200 pt-20 min-h-screen">
                 <div className="hero-content flex-col">
-                    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div className="bg-base-100 w-full max-w-sm shadow-2xl">
                         {/* update form */}
                         <form onSubmit={handleUpdateProfile} className="card-body">
                             <div className="form-control">
