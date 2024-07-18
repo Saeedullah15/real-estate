@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 const EachEstateCard = ({ eachEstate }) => {
     const { id, image, estate_title, segment_name, description, price, status, area, location, facilities } = eachEstate;
+    console.log(image, id);
 
     useEffect(() => {
         AOS.init();
@@ -18,7 +19,7 @@ const EachEstateCard = ({ eachEstate }) => {
         <div>
             <div className="card bg-base-100 shadow-xl" data-aos="zoom-in">
                 <figure>
-                    <img className="h-52 w-full" src={image} alt="Shoes" />
+                    <img className="h-52 w-full" src={image} alt="" />
                 </figure>
                 <div className="card-body h-[340px]">
                     <h2 className="card-title">{estate_title}</h2>

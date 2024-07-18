@@ -17,7 +17,7 @@ const EstateDetails = () => {
             <Helmet><title>Estate Details | {id}</title></Helmet>
             <div className="">
                 <figure>
-                    <img className='w-full h-[500px]' src={image} alt="Album" />
+                    <img className='w-full md:h-[500px]' src={image} alt="Album" />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>

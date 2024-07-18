@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "image": "https://www.nydailynews.com/wp-content/uploads/migration/2020/06/11/4UJ6DSWCNNFMTAWYLSKM72EZXI.jpg",
+      "image": "https://i.ibb.co/St2smDg/4-UJ6-DSWCNNFMTAWYLSKM72-EZXI.webp",
       "estate_title": "Fort Hamilton Military Base",
       "segment_name": "Military Base",
       "description": "A key military installation providing defense and support.",
@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Jefferson_County_Courthouse_in_Port_Townsend%2C_WA.jpg",
+      "image": "https://i.ibb.co/JyKzpKs/Jefferson-County-Courthouse-in-Port-Townsend-WA.jpg",
       "estate_title": "Jefferson County Courthouse",
       "segment_name": "Courthouse",
       "description": "A historic courthouse located in the heart of the city.",
@@ -25,7 +25,7 @@
     },
     {
       "id": 3,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Kitakyusyu_Central_Library.jpg",
+      "image": "https://i.ibb.co/RBwd6b1/Kitakyusyu-Central-Library.jpg",
       "estate_title": "Central City Library",
       "segment_name": "Library",
       "description": "A modern library offering extensive resources and community programs.",
@@ -37,7 +37,7 @@
     },
     {
       "id": 4,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Greenfield_Valley_Heritage_Park_%2827783078700%29.jpg",
+      "image": "https://i.ibb.co/d4vZgSp/Greenfield-Valley-Heritage-Park-27783078700.jpg",
       "estate_title": "Greenfield Public Park",
       "segment_name": "Public Park",
       "description": "A large public park featuring recreational facilities and open spaces.",
@@ -49,7 +49,7 @@
     },
     {
       "id": 5,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Taylor_Administration_Center%2C_Sinclair_Community_College%2C_3rd_Street_and_Perry_Street%2C_Dayton%2C_OH.jpg",
+      "image": "https://i.ibb.co/st6J5zj/Taylor-Administration-Center-Sinclair-Community-College-3rd-Street-and-Perry-Street-Dayton-OH.jpg",
       "estate_title": "Downtown Community Center",
       "segment_name": "Community Center",
       "description": "A vibrant community center offering various activities and services.",
@@ -61,7 +61,7 @@
     },
     {
       "id": 6,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Woolwich_Old_Town_Hall_and_Public_Library.jpg",
+      "image": "https://i.ibb.co/q01r5v7/Woolwich-Old-Town-Hall-and-Public-Library.jpg",
       "estate_title": "Old Town Library",
       "segment_name": "Library",
       "description": "A historic library offering a wide range of books and community events.",

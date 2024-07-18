@@ -20,7 +20,6 @@ const routes = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch("/estates.json"),
             },
             {
                 path: "/register",
